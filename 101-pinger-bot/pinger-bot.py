@@ -2,6 +2,10 @@ import settings
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
+import sys
+from pythonping import ping
+
+
 logging.basicConfig(filename='bot.log', level=logging.INFO)
 
 def main():
@@ -17,9 +21,11 @@ def greet_user(update, context):
     update.message.reply_text('Бот стартовал! Ты вызвал команду /start')
 
 def talk_to_me(update, context):
-    user_text = update.message.text 
-    print(user_text)
-    update.message.reply_text("Я Бот, отвечаю тем же: " + user_text)
+    ip_addr = update.message.text
+    print(ip_addr)
+    result = sys.stdout
+    response_list = ping(ip_addr, verbose=True)
+    update.message.reply_text(result)
 
 if __name__ == "__main__":
     main()
