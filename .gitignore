@@ -1,5 +1,6 @@
 # My ignore rules
 settings.py
+.vscode
 
 
 # Byte-compiled / optimized / DLL files
