@@ -4,15 +4,13 @@
 
 ## TASK 101: pinger-bot
 
+>  This is Telegram bot to ping any Internet IP address or host.
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This is Telegram bot to ping any Internet IP address or host.
-
-python ./101-pinger-bot/
-
-Print any IP address or host
+python ./101-pinger-bot/pinger-bot.py
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-outputs
+>  Put any IP address or host to chat. You will see outputs:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ping 8.8.8.8
