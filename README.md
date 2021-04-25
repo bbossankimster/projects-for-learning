@@ -1,27 +1,49 @@
-# projects-for-learning
+# Projects for learning
 
->   Here are my tasks and solutions by Python
+The main object is to get experience in different types of Python application:
 
-## TASK 101: pinger-bot
+-   console application
 
->  This is Telegram bot to ping any Internet IP address or host.
+-   Web application
+
+-   bot application
+
+-   RESTfull API application
+
+# Getting Started
+
+Clone repositary, activate env (if you want) and install requirements:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-python ./101-pinger-bot/pinger-bot.py
+git clone https://github.com/bbossankimster/projects-for-learning.git
+cd projects-for-learning
+python -m venv env
+source ./env/bin/activate
+pip install -r requirements.txt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
->  Put any IP address or host to chat. You will see outputs:
+# Project 1. Network pinger
+
+You can run simple ICMP ping from console, Telegram bot or Web application (by
+API or from simple Text field)
+
+## Console pinger application
+
+Console pinger application is example of using `subprocess` and `pythonping`
+modules
+
+Application based on `subprocess` module:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-ping 8.8.8.8
-Pinging 8.8.8.8 with 32 bytes of data:
-Reply from 8.8.8.8: bytes=32 time=80ms TTL=116
-Reply from 8.8.8.8: bytes=32 time=79ms TTL=116
-Reply from 8.8.8.8: bytes=32 time=84ms TTL=116
-Reply from 8.8.8.8: bytes=32 time=80ms TTL=116
-
-Ping statistics for 8.8.8.8:
-    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-Approximate round trip times in milli-seconds:
-    Minimum = 79ms, Maximum = 84ms, Average = 80ms
+python learning.py -app console_pinger -lib subprocess -host 8.8.8.8
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Application based on `pythonping` module:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python learning.py -app console_pinger -lib pythonping -host 8.8.8.8
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Instead 8.8.8.8 you can put your host/IP to ping.
+
+# 
